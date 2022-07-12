@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "muszkekankamod:plastic_nugget"
+    }
+  },
+  "result": {
+    "item": "muszkekankamod:raw_plastic"
+  }
+}

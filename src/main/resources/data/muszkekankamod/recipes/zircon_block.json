@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "muszkekankamod:zircon"
+    }
+  },
+  "result": {
+    "item": "muszkekankamod:zircon_block"
+  }
+}

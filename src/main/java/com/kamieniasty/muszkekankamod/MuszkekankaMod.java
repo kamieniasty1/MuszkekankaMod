@@ -22,8 +22,11 @@ public class MuszkekankaMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         /* registering ModItems and any item */
+
         ModItems.register(modEventBus);
+
         /* registering ModBlocks and any block */
+
         ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);

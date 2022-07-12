@@ -2,11 +2,16 @@
   "item.muszkekankamod.zircon": "Zircon",
   "item.muszkekankamod.raw_zircon": "Raw Zircon",
   "item.muszkekankamod.muszkekanka_bottle": "Muszkekanka Bottle",
+  "item.muszkekankamod.plastic_nugget": "Plastic Nugget",
+  "item.muszkekankamod.raw_plastic": "Raw Plastic",
+  "item.muszkekankamod.plastic": "Plastic",
 
   "block.muszkekankamod.zircon_block": "Block of Zircon",
   "block.muszkekankamod.zircon_ore": "Zircon Ore",
   "block.muszkekankamod.deepslate_zircon_ore": "Deepslate Zircon Ore",
   "block.muszkekankamod.muszkekanka_block": "Block of Muszkekanka",
+  "block.muszkekankamod.plastic_ore": "Plastic Ore",
+  "block.muszkekankamod.deepslate_plastic_ore": "Deepslate Plastic Ore",
 
   "itemGroup.muszkekankatab": "MuszkekankaMod"
 }

@@ -40,6 +40,16 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.MUSZKEKANKA_TAB);
 
+    public static final RegistryObject<Block> PLASTIC_ORE = registerBlock("plastic_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),
+                    UniformInt.of(3,7)), ModCreativeModeTab.MUSZKEKANKA_TAB);
+
+    public static final RegistryObject<Block> DEEPSLATE_PLASTIC_ORE = registerBlock("deepslate_plastic_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),
+                    UniformInt.of(3,7)), ModCreativeModeTab.MUSZKEKANKA_TAB);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

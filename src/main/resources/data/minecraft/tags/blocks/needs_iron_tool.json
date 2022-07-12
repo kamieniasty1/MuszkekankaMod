@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "muszkekankamod:zircon_ore",
+    "muszkekankamod:zircon_block",
+    "muszkekankamod:deepslate_zircon_ore",
+    "muszkekankamod:plastic_ore",
+    "muszkekankamod:deepslate_plastic_ore"
+  ]
+}
