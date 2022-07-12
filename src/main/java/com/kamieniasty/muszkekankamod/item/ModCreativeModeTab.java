@@ -7,7 +7,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab MUSZKEKANKA_TAB = new CreativeModeTab("muszkekankatab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.ZIRCON.get());
+            return new ItemStack(ModItems.MUSZKEKANKA_BOTTLE.get());
         }
     };
 }

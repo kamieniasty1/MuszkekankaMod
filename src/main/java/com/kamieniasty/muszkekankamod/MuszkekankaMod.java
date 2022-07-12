@@ -1,5 +1,6 @@
 package com.kamieniasty.muszkekankamod;
 
+import com.kamieniasty.muszkekankamod.block.ModBlocks;
 import com.kamieniasty.muszkekankamod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -20,8 +21,10 @@ public class MuszkekankaMod {
     public MuszkekankaMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-       /* registering ModItems and any item */
+        /* registering ModItems and any item */
         ModItems.register(modEventBus);
+        /* registering ModBlocks and any block */
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
