@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "muszkekankamod:block/zircon_lamp_on"},
+    "lit=false": { "model": "muszkekankamod:block/zircon_lamp_off"}
+  }
+}

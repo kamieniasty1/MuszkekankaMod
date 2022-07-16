@@ -5,6 +5,9 @@
   "item.muszkekankamod.plastic_nugget": "Plastic Nugget",
   "item.muszkekankamod.raw_plastic": "Raw Plastic",
   "item.muszkekankamod.plastic": "Plastic",
+  "item.muszkekankamod.eight_ball": "Eight Ball",
+  "item.muszkekankamod.blueberry": "Blueberry",
+  "item.muszkekankamod.blueberry_seeds": "Blueberry Seeds",
 
   "block.muszkekankamod.zircon_block": "Block of Zircon",
   "block.muszkekankamod.zircon_ore": "Zircon Ore",
@@ -12,6 +15,10 @@
   "block.muszkekankamod.muszkekanka_block": "Block of Muszkekanka",
   "block.muszkekankamod.plastic_ore": "Plastic Ore",
   "block.muszkekankamod.deepslate_plastic_ore": "Deepslate Plastic Ore",
+  "block.muszkekankamod.jumpy_block": "Jumpy Block",
+  "block.muszkekankamod.zircon_lamp": "Zircon Lamp",
+  "block.muszkekankamod.blueberry_crop": "Blueberry Crop",
 
-  "itemGroup.muszkekankatab": "MuszkekankaMod"
+  "itemGroup.muszkekankatab": "MuszkekankaMod",
+  "entity.minecraft.villager.muszkekankamod.muszkekanka_expert": "Muszkekanka Master"
 }

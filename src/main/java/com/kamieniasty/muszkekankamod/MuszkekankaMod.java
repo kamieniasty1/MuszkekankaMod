@@ -2,7 +2,10 @@ package com.kamieniasty.muszkekankamod;
 
 import com.kamieniasty.muszkekankamod.block.ModBlocks;
 import com.kamieniasty.muszkekankamod.item.ModItems;
+import com.kamieniasty.muszkekankamod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,12 +25,11 @@ public class MuszkekankaMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         /* registering ModItems and any item */
-
         ModItems.register(modEventBus);
-
         /* registering ModBlocks and any block */
-
         ModBlocks.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -35,15 +37,17 @@ public class MuszkekankaMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
 
         }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUEBERRY_CROP.get(), RenderType.cutout());
         }
     }
 }

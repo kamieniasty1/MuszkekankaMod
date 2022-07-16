@@ -1,13 +1,17 @@
 package com.kamieniasty.muszkekankamod.block;
 
 import com.kamieniasty.muszkekankamod.MuszkekankaMod;
+import com.kamieniasty.muszkekankamod.block.custom.JumpyBlock;
+import com.kamieniasty.muszkekankamod.block.custom.ZirconLampBlock;
 import com.kamieniasty.muszkekankamod.item.ModCreativeModeTab;
 import com.kamieniasty.muszkekankamod.item.ModItems;
+import com.kamieniasty.muszkekankamod.item.custom.BlueberryCropBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -50,6 +54,18 @@ public class ModBlocks {
                     .strength(6f).requiresCorrectToolForDrops(),
                     UniformInt.of(3,7)), ModCreativeModeTab.MUSZKEKANKA_TAB);
 
+    public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.MUSZKEKANKA_TAB);
+
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.MUSZKEKANKA_TAB);
+
+    public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
+            () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -64,6 +80,7 @@ public class ModBlocks {
     }
 
     public static void register(IEventBus eventBus){
+
         BLOCKS.register(eventBus);
     }
 }
